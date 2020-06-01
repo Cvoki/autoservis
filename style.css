@@ -1,0 +1,270 @@
+*{
+	font-family:arrial;
+	margin:0;
+	padding:0;
+}
+body{
+	background-color:white;
+}
+header{
+	background-color:rgb(65, 105, 225,0.8);
+	position:fixed;
+	width:100%;
+	height:50px;
+	display:flex;
+	justify-content:space-between;
+}
+.simbol{
+	order:3;
+}
+.simbol img{
+	width:50px;
+	height:50px;
+}
+.naslov{
+	margin-top:5px;
+	text-align:center;
+	text-transform:uppercase;
+	color:white;
+	order:2;
+}
+.glavni_meni{
+	cursor:pointer;
+	margin-top:5px;
+	order:1;
+}
+.glavni_meni ul{
+	color:white;
+	list-style-type:none;
+}
+.glavni_meni a{
+	color:white;
+	font-size:30px;
+	text-decoration:none;
+	padding:2px;
+}
+.glavni_meni li:hover{
+	background-color: rgb(0,0,0,0.5);
+	padding:2px;
+}
+.meni{
+	display:none;
+	margin-top:10px;
+	background-color:rgb(65, 105, 225,0.8);
+}
+.padajuci_meni{
+	display:none;
+}
+.padanje:hover .padajuci_meni{
+	display:block;
+	margin-left:15px;
+}
+.prikazi-meni{
+	cursor:pointer;
+	color:white;
+	margin-left:10px;
+	font-size:30px;
+}
+input[type=checkbox]{
+	display:none;
+}
+input[type=checkbox]:checked ~ .meni{
+	display:block;
+}
+section{
+	background-color: red;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center;
+	color:white;
+	position:absolute;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	animation:pozadina;
+	animation-duration:60s;
+	animation-iteration-count:infinitive;
+}
+@keyframes pozadina{
+	0%{
+		background-color: red;
+	}
+	25%{
+		background-color: yellow;
+	}
+	50%{
+		background-color: blue;
+	}
+	100%{
+		background-color: green;
+	}
+}
+.pocetna_strana{
+	margin:80px;
+	width:85%;
+}
+.pocetna_strana h1{
+	text-align:center;
+	border: 2px solid rgb(0,0,0,0);
+	border-radius: 8px 8px 0px 0px;
+	margin-bottom:10px;
+	background-color:rgb(65, 105, 225,0.8);
+	cursor:pointer;
+}
+.pocetna_strana h1:hover{
+	padding:5px;
+}
+#cene table,th,tr,td{
+	border:1px solid white;
+	padding:10px;
+	width:800px;
+}
+#cene table{
+	display:none;
+	border-collapse:collapse;
+	text-align:center;
+	background-color:rgb(0,0,0,0.5);
+	width: 98.5%;
+}
+#cene:hover table{
+	display:inherit;
+}
+.trenutna{
+	background-color:rgb(255,255,255,0.7);
+	color:black;
+	width:100%;
+	height:250px;
+	text-align:center;
+	float:left;
+}
+.trenutna img{
+	width:200px;
+	height:200px;
+}
+.usluge a,.cesta a{
+	color:white;
+	text-decoration:none;
+	text-align:center;
+	display:none;
+	font-size:20px;
+}
+.usluge:hover a,.cesta:hover a{
+	display:block;
+}
+.usluge a:hover,.cesta a:hover{
+	background-color:rgb(0,0,0,0.5);
+	border-bottom:1px solid white;
+	font-size:22px;
+}
+.oservisu{
+	background-color:rgb(0,0,0,0.5);
+}
+#fiat,#zakazivanje,#opel{
+	float:left;
+	height:250px;
+	width:200px;
+	margin-top:15px;
+	margin-left:80px;
+	margin-right:100px;
+}
+#zakazivanje{
+	margin-top:80px;
+}
+#zakazivanje p{
+	margin-bottom:10px;
+}
+#zakazivanje a{
+	background-color:rgb(65, 105, 225);
+	color:white;
+	text-decoration:none;
+	padding:5px;
+}
+#zakazivanje a:hover{
+	padding:7px;
+	background-color:blue;
+}
+.galerija{
+	width:100%;
+	height:200px;
+}
+.galerija img{
+	width:150px;
+	height:150px;
+	border:1px solid white;
+}
+.galerija img:hover{
+	transform:scale(3.5,2.5) translate(25px,-50px);
+}
+.kontakt{
+	color:white;
+	font-size:20px;
+	text-align:center;
+	margin-top:100px;
+	line-height:50px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:15px;
+}
+form input[type=text]{
+	margin:10px;
+}
+form textarea{
+	margin:10px;
+	height:150px;
+}
+form input[type=submit]{
+	background-color:rgb(65, 105, 225,0.8);
+	border:1px solid white;
+	border-radius:6px;
+	color:white;
+	height:25px;
+	width:70px;
+	cursor:pointer;
+}
+footer{
+	position:fixed;
+	background-color:rgb(0,0,0,0.5);
+	color:white;
+	bottom:0;
+	text-align:center;
+	width:100%;
+}
+@media only screen and (max-width:760px){
+	header{
+		background-color:rgb(65, 105, 225,0.9);
+	}
+	.naslov{
+		display:none;
+	}
+	.meni{
+		background-color:rgb(65, 105, 225,0.9);
+	}
+	.meni li{
+		width:760px;
+	}
+	.pocetna_strana{
+		margin-left:5px;
+		margin-right:5px;
+		width:700px;
+	}
+	.akcija{
+		display:none;
+	}
+	.galerija .dres{
+		display:none;
+	}
+	.galerija img:hover{
+		transform:scale(1.2,1.2);
+	}
+}
+@media only screen and (max-width:600px){
+	menu li{
+		width:600px;
+	}
+	.pocetna_strana{
+		width:550px;
+	}
+}
